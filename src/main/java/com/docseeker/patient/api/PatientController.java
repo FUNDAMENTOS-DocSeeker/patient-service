@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 @RestController
-@RequestMapping("api/patients")
+@RequestMapping("api/v1/patients")
 @AllArgsConstructor
 public class PatientController {
   private final PatientService patientService;
