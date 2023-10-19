@@ -4,6 +4,7 @@ import com.docseeker.patient.domain.model.entity.Patient;
 import com.docseeker.patient.domain.persistence.PatientRepository;
 import com.docseeker.patient.domain.service.PatientService;
 import com.docseeker.patient.util.Util;
+import java.lang.reflect.Array;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -44,5 +45,10 @@ public class PatientServiceImpl implements PatientService {
   public void delete(int id) {
     patientRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, PATIENT_NOT_FOUND));
     patientRepository.deleteById(id);
+  }
+
+  @Override
+  public Patient findByDniAndPassword(String dni, String password) {
+    return patientRepository.findByDniAndPassword(dni, password);
   }
 }

@@ -10,5 +10,7 @@ public interface PatientService {
   Patient update(Patient patient, int id);
   void delete(int id);
 
+  Patient findByDniAndPassword(String dni, String password);
+
 
 }

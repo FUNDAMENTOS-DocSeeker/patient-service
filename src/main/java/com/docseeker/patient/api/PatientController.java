@@ -33,6 +33,11 @@ public class PatientController {
     return patientService.findAll();
   }
 
+  @GetMapping("dni/{dni}/password/{password}")
+  public Patient login(@PathVariable String dni, @PathVariable String password) {
+    return patientService.findByDniAndPassword(dni, password);
+  }
+
   @GetMapping("/{id}")
   public Patient findById(@PathVariable int id) {
     return patientService.findById(id);

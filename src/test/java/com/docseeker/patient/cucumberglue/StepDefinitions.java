@@ -30,11 +30,10 @@ public class StepDefinitions {
     patient.setEmail("juan@gmail.com");
     patient.setPassword("123456");
     patient.setDni("12345678");
-    patient.setAge(20);
     patient.setWeight(70);
     patient.setHeight(1.70f);
-    patient.setPhoneNumber("987654321");
-    patient.setBirthDate("2000-01-01");
+    patient.setCellphone("987654321");
+    patient.setBirthday("2000-01-01");
   }
 
   @Then("se registra su nueva cuenta")

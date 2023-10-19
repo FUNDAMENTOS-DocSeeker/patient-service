@@ -28,12 +28,12 @@ public class Patient {
   private String email;
   private String password;
   private String dni;
-  private int age;
   private float height;
   private float weight;
   private float bmi;
-  private String birthDate;
-  private String phoneNumber;
+  private String birthday;
+  private String cellphone;
+  private String photo;
 
   @ElementCollection
   @CollectionTable(name = "patient_allergies")
